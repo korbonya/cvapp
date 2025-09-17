@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>CV — Mamadou Alpha Baldé</title>
     <meta name="description" content="CV imprimable de Mamadou Alpha Baldé — Ingénieur Full‑Stack & Expert IA, Tech Lead & Formateur" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="preload" href="photo.jpg" as="image" />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -126,7 +129,7 @@
             </p>
           </section>
 
-          <section aria-labelledby="xp-titre">
+          <section aria-labelledby="xp-titre" id="xp">
             <h2 id="xp-titre">Expérience professionnelle</h2>
 
             <div class="item">
@@ -182,7 +185,7 @@
                 </h3>
                 <div class="meta">2022 – Présent</div>
               </header>
-              <div class="skills-compact">
+              <div class="grid-2">
                 <div>
                   <h4>Sites web & CMS</h4>
                   <ul>
@@ -255,29 +258,41 @@
             </ul>
           </section>
 
-          <section aria-labelledby="skills-full-titre">
+          <section aria-labelledby="skills-full-titre" class="skills-tech">
             <h2 id="skills-full-titre">Compétences techniques</h2>
-            <div class="skills-compact">
-              <div>
+            <div class="grid-2">
+              <div class="col">
                 <h4>Front‑end</h4>
-                <p><strong>Expert :</strong> React, Next.js, TypeScript, JavaScript (ES6+)</p>
-                <p><strong>Mobile :</strong> React Native, Expo, Flutter (Riverpod)</p>
-                <p><strong>UI/UX :</strong> Tailwind/shadcn, Figma, Canva</p>
+                <ul class="mini">
+                  <li><strong>Expert :</strong> React, Next.js, TypeScript, JavaScript (ES6+)</li>
+                  <li><strong>Mobile :</strong> React Native, Expo, Flutter (Riverpod)</li>
+                  <li><strong>UI/UX :</strong> Tailwind/shadcn, Figma, Canva</li>
+                </ul>
               </div>
-              <div>
+              <div class="col">
                 <h4>Back‑end & Cloud</h4>
-                <p><strong>Runtime :</strong> Node.js</p>
-                <p><strong>Bases de données :</strong> PostgreSQL, MongoDB, Firebase</p>
-                <p><strong>API :</strong> REST, JWT, intégrations tierces</p>
-                <p><strong>Cloud :</strong> Firebase, DigitalOcean, Vercel</p>
+                <ul class="mini">
+                  <li><strong>Runtime :</strong> Node.js</li>
+                  <li><strong>Bases de données :</strong> PostgreSQL, MongoDB, Firebase</li>
+                  <li><strong>API :</strong> REST, JWT, intégrations tierces</li>
+                  <li><strong>Cloud :</strong> Firebase, DigitalOcean, Vercel</li>
+                </ul>
               </div>
-              <div>
+              <div class="col">
                 <h4>CMS & LMS</h4>
-                <p>WordPress (institutionnel, e‑commerce), Moodle (self‑hosted), LMS</p>
+                <ul class="mini">
+                  <li>WordPress (institutionnel, e‑commerce)</li>
+                  <li>Moodle (self‑hosted)</li>
+                  <li>LMS (conception de plateformes)</li>
+                </ul>
               </div>
-              <div>
+              <div class="col">
                 <h4>IA</h4>
-                <p>OpenAI API, chatbots, RAG, embeddings, intégration prod</p>
+                <ul class="mini">
+                  <li>OpenAI API, chatbots</li>
+                  <li>RAG, embeddings</li>
+                  <li>Intégration en production</li>
+                </ul>
               </div>
             </div>
           </section>
