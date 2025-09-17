@@ -153,10 +153,63 @@ body {
 }
 .content p { margin: 6px 0; }
 
-.item { display: grid; gap: 6px; }
+/* Experience items with better visual separation */
+.item {
+  display: grid;
+  gap: 6px;
+  padding: 12px 0;
+  border-left: 3px solid var(--bg);
+  transition: border-color 0.2s ease;
+}
+.item:hover { border-left-color: var(--accent); }
+.item + .item { border-top: 1px solid var(--border); }
+
 .item-head { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
 .item .meta { color: var(--muted); font-size: 12px; white-space: nowrap; }
 .sub ul { margin: 0; padding-left: 18px; }
+
+/* Skills compact layout with tags */
+.skills-compact { display: grid; gap: 12px; }
+.skill-group { margin-bottom: 8px; }
+.skill-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.skill-tag {
+  background: var(--chip);
+  border: 1px solid #dbeafe;
+  color: #1e3a8a;
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 500;
+}
+.skill-tag.expert {
+  background: #fef3c7;
+  border-color: #fbbf24;
+  color: #92400e;
+  font-weight: 600;
+}
+
+/* Improved company badges */
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  line-height: 1.2;
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--muted);
+  font-weight: 500;
+}
+.badge.company { 
+  background: linear-gradient(135deg, #ecfeff, #f0f9ff); 
+  border-color: #0ea5e9; 
+  color: #0c4a6e; 
+}
+.badge.freelance { 
+  background: linear-gradient(135deg, #f0fdf4, #ecfdf5); 
+  border-color: #22c55e; 
+  color: #166534; 
+}
 
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .grid-2.slim { align-items: start; }
@@ -170,6 +223,15 @@ body {
   .header.compact .avatar img { width: 80px; height: 80px; border-radius: 10px; }
   .grid-2 { grid-template-columns: 1fr 1fr; gap: 6mm; }
   .skills .tags li { padding: 2px 6px; font-size: 10.5px; }
+  .content { gap: 8px; }
+  .item { padding: 6px 0; border-left: none; }
+  .item + .item { border-top: 1px solid #ddd; margin-top: 3px; padding-top: 6px; }
+  .badge { padding: 1px 6px; font-size: 9px; }
+  .skill-tag { padding: 1px 5px; font-size: 9px; }
+  p { margin: 2px 0; }
+  ul { margin: 2px 0; }
+  .bullets.compact li { margin-bottom: 1px; }
+  h4 { margin: 3px 0 2px 0; }
 }
 
 .toast {
