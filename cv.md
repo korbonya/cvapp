@@ -24,7 +24,7 @@
 ## 💼 Expérience professionnelle
 
 ### **Smart SARL** — *Tech Lead & Développeur Full‑Stack*
-**Janvier 2021 – Présent | Conakry, Guinée**
+**Juillet 2021 – Présent | Conakry, Guinée**
 
 - **Management technique :** encadrement et mentoring d’une équipe de 3 développeurs
 - **Architecture :** conception d’applications web et mobiles performantes (Next.js, React Native)
@@ -86,7 +86,7 @@
 ---
 
 ### **Octa SARL** — *Développeur Front‑End & Mobile*
-**Septembre – Décembre 2021 | Conakry, Guinée**
+**Février – Juillet 2021 | Conakry, Guinée**
 
 - Développement d’applications Flutter et développement web
 - **FIM FM :** Application radio mobile avec streaming temps réel (Android/iOS)
@@ -95,7 +95,7 @@
 ---
 
 ### **Satercom Guinée** — *Développeur web junior*
-**Janvier 2019 – Octobre 2020 | Conakry, Guinée**
+**Février 2020 – Décembre 2020 | Conakry, Guinée**
 
 - Développement front‑end (HTML5/CSS3/JavaScript, WordPress)
 - **DJOMA FM :** Application radio avec streaming intégré (Android/iOS) — Rôle : seul développeur

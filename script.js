@@ -2,6 +2,7 @@
   const shareBtn = document.getElementById('btn-share');
   const printBtn = document.getElementById('btn-print');
   const toast = document.getElementById('toast');
+  const body = document.body;
 
   function showToast(msg) {
     if (!toast) return;
@@ -32,9 +33,42 @@
   }
 
   function doPrint() {
-    // Use native print dialog; user can select "Save as PDF"
-    window.print();
-    showToast('Utilisez "Enregistrer en PDF" dans la boîte d’impression');
+    // Enable print design mode to preserve accents/gradients, then print
+    enablePrintDesign();
+    // Allow layout to settle before invoking print
+    setTimeout(() => {
+      window.print();
+      showToast('Utilisez "Enregistrer en PDF" dans la boîte d’impression');
+    }, 50);
+  }
+
+  function enablePrintDesign() {
+    body.classList.add('print-design');
+  }
+
+  function disablePrintDesign() {
+    body.classList.remove('print-design');
+  }
+
+  // Ensure print-design mode applies even when user uses Ctrl+P or browser menu
+  window.addEventListener('beforeprint', enablePrintDesign);
+  window.addEventListener('afterprint', disablePrintDesign);
+
+  // Fallback for browsers using matchMedia change events
+  if (window.matchMedia) {
+    const mql = window.matchMedia('print');
+    // Some older browsers use addListener/removeListener
+    if (typeof mql.addEventListener === 'function') {
+      mql.addEventListener('change', (e) => {
+        if (e.matches) enablePrintDesign();
+        else disablePrintDesign();
+      });
+    } else if (typeof mql.addListener === 'function') {
+      mql.addListener((e) => {
+        if (e.matches) enablePrintDesign();
+        else disablePrintDesign();
+      });
+    }
   }
 
   if (shareBtn) shareBtn.addEventListener('click', doShare);
